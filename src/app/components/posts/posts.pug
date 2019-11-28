@@ -1,0 +1,24 @@
+.posts-list
+	.uk-grid
+		.uk-width-1-4(*ngFor="let post of posts")
+			.uk-card.uk-card-default.uk-card-body
+				.uk-card-title {{ post.post_title }}
+			
+				a.uk-link-success(href="#") Follow
+
+			
+				//- img.img-thumbnail.picture.hidden-xs(src="{{ post.avatar}}") 
+				//- img.img-thumbnail.visible-xs.picture_mob(src="{{ post.avatar}}")
+				h5 {{ post.created }}
+				span(ng-init="limit = 150") {{ post.body | slice: 0: 150 }}
+			.row.nav
+				.col-md-4
+				.col-md-8.iconButtons
+					.col-md-4.col-xs-4.well
+						i.glyphicon.glyphicon-envelope
+					.col-md-4.col-xs-4.well
+						i.glyphicon.glyphicon-heart-empty
+					.col-md-4.col-xs-4.well
+						i.glyphicon.glyphicon-thumbs-up
+
+

@@ -1,0 +1,5 @@
+div.uk-container.uk-container-large.tags 
+    .uk-padding-small Tags all over
+    .uk-grid
+        div.uk-animation-fade(*ngFor="let tag of tags")
+            .uk-label {{tag.name}}

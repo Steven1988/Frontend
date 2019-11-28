@@ -1,0 +1,30 @@
+nav.uk-navbar-container
+	.uk-navbar-container(uk-navbar)
+		.uk-navbar-right
+			ul.uk-subnav.uk-subnav-divider
+				li 
+					a(href="") About us
+				li
+					a(href="") Contact us
+
+	.dividline.light-grey
+
+	div.uk-navbar-container(uk-navbar)
+		.uk-navbar-left
+			.navbar-logo
+				.uk-navbar-item.uk-logo(href="/") My Wiki
+		.uk-navbar-center
+			ul.uk-navbar-nav
+				li
+					a([routerLink]="['./users']") Users
+				li
+					a([routerLink]="['./posts']") Posts
+				li
+					a([routerLink]="['./notes']") My Notes
+				li
+					a([routerLink]="['./tags']") All Tags
+			
+		.uk-navbar-right
+			ul.uk-navbar.nav
+				li
+					a(href="#") offer! 

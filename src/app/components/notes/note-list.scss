@@ -1,0 +1,12 @@
+.notes {
+    .eachnote {
+        margin-bottom: 2em;
+    }
+    .note-header {
+        display: flex;
+        justify-content: space-between
+    }
+    .note-title {
+        width: 100%;
+    }
+}

@@ -1,0 +1,38 @@
+div.uk-container.uk-container-large 
+	.uk-cover-container
+		img(src="assets/img/464491.jpg")
+	.uk-grid
+		.uk-width-1-2
+			h3.headTitle List of users
+	.uk-grid
+		.uk-width-1-2
+			button.uk-button.uk-button-primary(type="button", [routerLink]="['add-user']") Add New User
+		.uk-width-1-2
+			//- search-filter
+			//- input.uk-input(type="text", [(ngModel)]="searchText", placeholder="Search")
+			//- p Filtered By: {{ searchText }}
+	.uk-inline
+		//- button(type="button") Hi
+		button.uk-button.uk-button-primary Hi
+		button.uk-button.uk-button-default(type="button") Dropdown
+		div(uk-dropdown)
+			ul.uk-nav.uk-dropdown-nav
+				li.uk-active
+					a(href="#") Active
+				li
+					a(href="#") Item
+				li.uk-nav-header Header
+
+	
+	table.uk-table.uk-table-striped.uk-animation-fade
+		thead
+			tr
+				th Name
+				th Email
+				th Gender
+		tbody
+			tr(*ngFor="let user of users")
+				td
+					a( [routerLink]="['/users', user.id]" ) {{ user.name }}
+				td {{ user.email }}
+				td {{ user.gender }}

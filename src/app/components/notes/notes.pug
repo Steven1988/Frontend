@@ -1,0 +1,13 @@
+div.uk-container.uk-container-large.notes
+    div.uk-padding-small
+        button.uk-button.uk-button-default( [routerLink]="['addnote']") Add Note
+    .uk-grid
+        .uk-width-1-3.eachnote(*ngFor="let note of notes") 
+            .uk-card.uk-card-small.uk-card-default.uk-card-body.uk-animation-fade.uk-box-shadow-hover-large( [routerLink]="['/notes', note.id]" )
+                .uk-card-header.note-header
+                    .uk-card-title.note-title {{ note.title }}
+                    button.deleteNote.uk-button.uk-button-default((click)="deleteNote($event, note.id)")
+                        span(uk-icon="icon: close")
+                .uk-card-body
+                    p.uk-text-meta {{ note.created }}
+                    p {{ note.body }}

@@ -1,0 +1,46 @@
+div.container.target
+	.row
+		.col-sm-10.text-left
+			h1 {{ user.name }}
+
+			button.uk-button.uk-button-primary(type="text") Message Me
+
+	div
+		.uk-grid
+			.uk-width-1-4
+				.uk-section.uk-section-muted
+					ul.uk-list.uk-list-divider.uk-position-relative.uk-padding-small
+						li(contenteditable="false") Profile
+						li
+							strong Email: 
+							span.uk-float-right {{ user.email }}
+						li
+							strong Gender: 
+							span.uk-float-right {{ user.gender }}
+			//- 			li
+			//- 				strong Address: 
+			//- 				span.uk-float-right {{ user.address }}
+			//- 			li
+			//- 				strong Company: 
+			//- 				span.uk-float-right {{ user.company }}
+			//- 			li
+			//- 				strong Registered: 
+			//- 				span.uk-float-right {{ user.registered }}
+
+			//- 		ul.uk-list.uk-list-divider.uk-position-relative.uk-padding-small
+			//- 			li(contenteditable="false") From 
+			//- 			li
+			//- 				strong City: 
+			//- 				span.uk-float-right {{ user.city }}
+			//- 			li
+			//- 				strong Country: 
+			//- 				span.uk-float-right {{ user.country }}
+
+			//- .uk-width-3-4
+			//- 	.panel.panel-success
+			//- 		.panel-heading {{ user.greeting }}
+			//- 	.panel.panel-default
+			//- 		.panel-heading.text-left {{ user.name }}'s Bio
+			//- 		.panel-body
+			//- 			p {{ user.about }}
+					

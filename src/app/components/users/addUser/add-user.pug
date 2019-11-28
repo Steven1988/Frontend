@@ -1,0 +1,15 @@
+div 
+	div
+		h4 Add a new user to the Application
+
+		form.form-group([formGroup]="SomeForm")
+			label Full Name
+			input.form-control(type="text" placeholder="Enter Name")
+			label Email
+			input.form-control(type="email" placeholder="Enter Email")
+			label(for="gender") Gender
+			select.form-control(id="gender")
+				option Male
+				option Female
+			hr
+			button.btn.btn-success Save User

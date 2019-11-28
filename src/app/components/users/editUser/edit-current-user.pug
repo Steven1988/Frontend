@@ -1,0 +1,25 @@
+div.uk-container 
+    .edit-profile
+        .uk-heading-large Edit your profile
+
+        form.uk-form-stacked.uk-grid([formGroup]="editProfileForm", (ngSubmit)="saveProfile()")
+            .uk-width-1-1.uk-margin
+                label.uk-form-label Name
+                input.uk-input(type="text" placeholder="Name" formControlName="name")
+                label.uk-form-label Email 
+                input.uk-input(type="text" placeholder="Email" formControlName="email")
+                div.uk-margin.uk-grid-small.uk-child-width-auto.uk-grid Gender
+                    label.uk-form-label
+                        input.uk-radio(type="radio" formControlName="male" name="male") 
+                        | Male
+                    label.uk-form-label
+                        input.uk-radio(type="radio" formControlName="female" name="female") 
+                        | Female
+                
+                label.uk-form-label City
+                input.uk-input(type="text" placeholder="City" formControlName="city")
+
+            .uk-width-1-1.uk-margin
+                button.uk-button.uk-button-primary(type="submit") Save
+                button.uk-button
+                    a( [routerLink]="['/users']" ) Cancel

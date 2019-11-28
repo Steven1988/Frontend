@@ -1,0 +1,26 @@
+div.uk-container
+    form.uk-grid([formGroup]="addNoteForm", (ngSubmit)="addNote()")
+        .uk-width-1-1.uk-margin
+            input.uk-input(type="text" placeholder="Title" formControlName="title")
+        .uk-width-1-1.uk-margin
+            .js-upload.uk-placeholder.uk-text-center
+                span(uk-icon="icon: cloud-upload")
+                span.uk-text-middle Attach files by dropping them here or 
+                .uk-form-custom
+                    input(type="file" multiple)
+                    span.uk-link selecting one
+            
+        .uk-width-1-2.uk-margin
+            textarea.uk-textarea(placeholder="Note" formControlName="body")
+        .uk-width-1-2.uk-margin
+            select.uk-select
+                option Option 01
+                option Option 02
+    
+        .uk-width-1-1
+            button.uk-button.uk-button-primary(type="submit") Save
+            button.uk-button() Cancel
+        .uk-width-1-1
+            pre {{ note }}
+                
+
